@@ -1,0 +1,13 @@
+Update 0.4.1
+Added password recovery for:
++Outlook Express
++Microsoft Outlook 2000/2002/2003/2007/2010
++Windows Mail, windows Live Mail
++IncrediMail
++Eudora
++Netscape 6.x/7.x
++Mozilla Thunderbird
++Group Mail Free
++Yahoo! Mail - If the password is saved in Yahoo! Messenger application.
++Hotmail/MSN mail - If the password is saved in MSN/Windows/Live Messenger application.
++Gmail - If the password is saved by Gmail Notifier application, Google Desktop, or by Google Talk.

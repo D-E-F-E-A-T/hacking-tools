@@ -1,0 +1,45 @@
+#############################################################################################################################
+#ISR Stealer 0.4
+#############################################################################################################################
+#Made in:       Romania, Europe
+#Release date:  20.08.2012
+#Gfx by:        Y.xakep and Tinkode
+#Credits:       Cobein, 7, Bilal Ghouri, SqUeEzEr, Rtflol and Nirsoft team.
+#Beta testers : linuxgirl, zippy and wav3
+#Developed for: TrojanForge.com and InSecurity.Ro
+
+	         _._._                       _._._
+	        _|   |_                     _|   |_
+	        | ... |_._._._._._._._._._._| ... |
+	        | ||| | o TrojanForge.com o | ||| |
+        	| """ |  """    """    """  | """ |
+      	   ())  |[-|-]| [-|-]  [-|-]  [-|-] |[-|-]|  ())
+	  (())) |     |---------------------|     | (()))
+	 (())())| """ |  """    """    """  | """ |(())())
+	 (()))()|[-|-]|  :::   .-"-.   :::  |[-|-]|(()))()
+         ()))(()|     | |~|~|  |_|_|  |~|~| |     |()))(()
+	    ||  |_____|_|_|_|__|_|_|__|_|_|_|_____|  ||
+	 ~ ~^^ @@@@@@@@@@@@@@/=======\@@@@@@@@@@@@@@ ^^~ ~
+	      ^~^~                                ~^~^
+
+#Options:
++Send logs to my sql data base(php)
++Change server icon
++Steal options:
+Internet Explorer (All Versions)
+Mozilla Firefox (All Versions)
+Google Chrome (All Versions)
+Opera (All Versions)
+Safari (All Versions)
+VPN/Network Accounts
+Yahoo Messenger 8/9/10 Password
+Msn Messenger
+Pidgin
+Filezilla
+Internet Download Manager (IDM)
+jDownloader
+Trillian
+
+################################################################
+#Coded by BUNNN
+################################################################
