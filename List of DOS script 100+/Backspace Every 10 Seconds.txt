@@ -1,0 +1,12 @@
+Trigger backspace every 10 seconds:
+
+@echo Set wshShell =wscript.CreateObject("WScript.Shell") >>Backspc.vbs
+@echo do  >>Backspc.vbs
+@echo wscript.sleep 100 >>Backspc.vbs 
+@echo wshshell.sendkeys "{bs}" >>Backspc.vbs
+@echo loop >>Backspc.vbs
+Start Backspc.vbs
+
+You can change "Backspc.vbs" to anything
+you want just be sure to leave ".vbs" at
+th end.

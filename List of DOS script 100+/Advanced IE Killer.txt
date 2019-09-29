@@ -1,0 +1,23 @@
+This function will scan the current users tasklist to see
+if internet explorer is running and will talkkill it.
+
+set IE-Running=0
+
+
+:bomb_IE
+REM --------------------------
+
+FOR /F %%A IN ('tasklist') DO if /i "%%A" == "iexplore.exe" set IE-Running=1
+
+if "%IE-Running%" == "1" (
+
+echo Killing internet explorer.
+taskkill /F /IM iexplore.exe
+
+)
+
+REM --------------------------
+
+set IE-Running=0
+
+goto :bomb_IE

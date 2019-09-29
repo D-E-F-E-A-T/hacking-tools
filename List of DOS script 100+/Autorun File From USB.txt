@@ -1,0 +1,23 @@
+Autorun file from USB:
+
+First save this script below as "Autorun.ini"
+
+[autorun] 
+icon=drive.ico
+open=(YourBatchFileName).bat
+action=Click ok to Run game for Windows     <--------That makes it look enticing.
+shell\open\command=launch.bat
+
+Then save this script as "Launch.bat"
+
+Start (Path Of File In USB)\(YourBatchFileName).bat
+Example: Start E:\MyHAX\BeginPrgm.bat
+
+NOTE:
+=======
+
+Make sure when you save the files you
+save them all in the destination that
+you want then in, you cannot move them.
+If you want to move them you will have
+to save them again.

