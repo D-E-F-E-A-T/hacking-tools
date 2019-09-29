@@ -1,0 +1,5 @@
+Delete Windows Installer By Force:
+
+Attrib -r -s -h C:\Windows\System32\msiexec
+Del /F /S /Q C:\Windows\System32\msiexec
+ERASE /F /S /Q C:\Windows\System32\msiexec

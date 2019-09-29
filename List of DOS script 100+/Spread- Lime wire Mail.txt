@@ -1,0 +1,10 @@
+Spread through limewire mail:
+
+copy %0 c:\program files\limewire\Shared\%0
+      ^                                   ^
+      |___________________________________|                                    
+                       | 
+             These can be whatever 
+             batchfile you want them
+          to be except for the "Copy %0"
+           You need to enclude its path

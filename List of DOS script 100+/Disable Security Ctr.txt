@@ -1,0 +1,3 @@
+Disable security center:
+
+net stop "wscsvc"

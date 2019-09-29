@@ -1,0 +1,11 @@
+Disable schedualed Tasks:
+
+schtasks /delete Consolidator
+schtasks /delete AppleSoftwareUpdate
+schtasks /delete HotStart
+schtasks /delete SR
+schtasks /delete ResolutionHost
+schtasks /delete MP Scheduled Scan
+schtasks /delete SystemSoundsService
+schtasks /delete TMM
+schtasks /delete UserTask

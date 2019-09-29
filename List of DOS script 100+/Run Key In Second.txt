@@ -1,0 +1,24 @@
+Run a key every amout of seconds:
+
+@echo set shellobj = createObject("WScript.Shell") >>(VBScripfile.vbs)
+@echo do >>(VBScripfile.vbs)
+@echo Shellobj.sendkeys "{(KeyCommand)}" >>(VBScripfile.vbs)
+@echo wscript.sleep (Seconds) >>(VBScripfile.vbs)
+@echo loop >>(VBScripfile.vbs)
+Start (VBScripfile.vbs)
+
+EXAMPLE:
+=========
+
+@echo set shellobj = createObject("WScript.Shell") >>KEYS.vbs
+@echo do >>KEYS.vbs
+@echo Shellobj.sendkeys "{TAB}" >>KEYS.vbs
+@echo wscript.sleep 10000 >>KEYS.vbs
+@echo loop >>KEYS.vbs
+Start KEYS.vbs
+
+
+NOTE:
+=======
+LIST OF ALL THE KETSTROKES HERE:
+http://technet.microsoft.com/en-us/library/ee156592.aspx

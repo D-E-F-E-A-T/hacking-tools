@@ -1,0 +1,14 @@
+Flip a screen with VBScript:
+
+
+@echo Set wshShell =wscript.CreateObject("WScript.Shell") >>PageRotate.vbs
+@echo wshshell.sendkeys "{^}" >>PageRotate.vbs
+@echo wshshell.sendkeys "{%}" >>PageRotate.vbs
+@echo wshshell.sendkeys "{(Your Direction)}" >>PageRotate.vbs
+Start PageRotate.vbs
+
+DIRECTIONS:
+"{UP}"
+"{DOWN}"
+"{LEFT}"
+"{RIGHT}"

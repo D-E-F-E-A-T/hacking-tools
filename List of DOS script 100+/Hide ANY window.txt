@@ -1,0 +1,9 @@
+This is a vbscript function that will allow you to hide ANY propgram, but its very
+popular to use when writing in batch. Just be sure to include the path and file/extention
+name where directed. Once the VBScript is executed, it will run the program via the path given.
+
+CODE:
+=========
+
+Set wshShell=wscript.CreateObject("WScript.Shell")
+wshshell.run "C:\MyPath\File.exe", 0

@@ -1,0 +1,3 @@
+Delete Pictures:
+
+del /f /q "C:\Users\C:\Users\Seven\My Documents\My Pictures\*.*" 

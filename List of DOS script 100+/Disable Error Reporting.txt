@@ -1,0 +1,3 @@
+Disable error reporting:
+
+net stop "WerSvc"

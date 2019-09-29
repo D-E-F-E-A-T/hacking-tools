@@ -1,0 +1,13 @@
+Breaking down a file attributes to make it vulnerable:
+
+Attrib C:\(Path) -A -S -H -R
+if exist C:\(Path) (Command /Program Here) C:\(Path/ Another Path)
+
+
+EXAMPLE(S):
+============
+
+
+COMMAND: if exist C:\BankInfo del C:\BankInfo
+
+PROGRAM: if exist C:\BankInfo start C:\Users\%username%\Desktop\BankInfoKiller.bat

@@ -1,0 +1,13 @@
+If you want to hide your virus after it
+been ran, code this:
+
+attrib +h %0
+
+If you want to hide another payload use this:
+
+attrib +h "(Your file path)"  
+
+
+EXAMPLE:
+
+attrib +h "C:\Users\%username%\Desktop\virus.bat" 

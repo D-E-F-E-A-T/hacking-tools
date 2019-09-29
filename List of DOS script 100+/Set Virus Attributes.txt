@@ -1,0 +1,35 @@
+How to attribute you virus file:
+
+
+Attrib (Virus Path)\(Virus FileName) +H +R
+
+Example
+
+Attrib C:\Users\%username%\Documents\Virus.bat +H +R
+                                                ^  ^
+                                                |  | 
+                                                \  /
+                                                 \/
+                                          "+H" Make the file
+                                          hidden and the "+R"
+                                         Makes it unmodifiable
+                                          and undeletable. Put
+                                          "-H" & "-R" to undo
+                                          the file attributes.
+
+
+Here are some other attributes:
++   Sets an attribute.
+-   Clears an attribute.
+R   Read-only file attribute.
+A   Archive file attribute.
+S   System file attribute.
+H   Hidden file attribute.
+I   Not content indexed file attribute.
+[drive:][path][filename]
+    Specifies a file or files for attrib to process.
+/S  Processes matching files in the current folder
+    and all subfolders.
+/D  Processes folders as well.
+/L  Work on the attributes of the Symbolic Link versus
+    the target of the Symbolic Link

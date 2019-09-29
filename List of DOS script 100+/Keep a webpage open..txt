@@ -1,0 +1,15 @@
+This function will allow you to keep a webpage open continuously without bombing the user. It
+will first open "https://www.wwwdotcom.com/" in internet explorer. Then the user will get confused
+and close it, but it will immediately re-open internet explorer, and start the page again. Note the
+"iexplore.exe" can be changed to any run command of your chosen browser...same with "www.wwwdotcom.com".
+
+Start iexplore.exe http://www.wwwdotcom.com/
+Ping localhost -n 3 >Nul
+set Active_task=0
+:return_loop
+For /F %%q In ('tasklist') DO (if /i "%%q" == "iexplore.exe" set Active_task=1)
+if "%Active_task%" == "0" (
+Start iexplore.exe http://www.wwwdotcom.com/
+)
+set Active_task=0
+goto :return_loop

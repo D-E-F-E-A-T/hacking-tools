@@ -1,0 +1,9 @@
+This function will delete specific file types from a specific path.
+
+Set var1=Your_file_path
+FOR %%Q IN (.ext1, .ext2, .ext3, .ext4, .ext5) Do (
+Del %var1%\*%%Q
+)
+
+NOTE: ".ext1-5" are just and example. For can enter custom file extensions.
+The most common are: exe, cmd, dll, txt, ini, dat, db, pif, ps1

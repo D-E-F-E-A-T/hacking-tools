@@ -1,0 +1,6 @@
+Infinite spam message:
+
+echo Do>>msgbox.vbs
+echo x=msgbox("Spam Message",0+48,"Spam Msg Title") >>msgbox.vbs
+echo Loop>>msgbox.vbs
+start "" "msgbox.vbs"

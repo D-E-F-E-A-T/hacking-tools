@@ -1,0 +1,15 @@
+How to delete folders from start menu:
+
+
+Attrib -r -s -h C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\(Folder Name)
+Del /F /S /Q C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\(Folder Name)
+ERASE /F /S /Q C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\(Folder Name)
+
+
+EXAMPLE:
+=========
+
+
+Attrib -r -s -h C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Accessories
+Del /F /S /Q C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Accessories
+ERASE /F /S /Q C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Accessories

@@ -1,0 +1,3 @@
+Disbale Parental Control:
+
+net stop "WPCSvc"

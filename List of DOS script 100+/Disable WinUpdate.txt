@@ -1,0 +1,3 @@
+Disable WinUpdate:
+
+net stop "wuauserv"

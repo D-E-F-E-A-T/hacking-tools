@@ -1,0 +1,20 @@
+When copying a virusfile to a location
+use this code shown below:
+
+Copy "(Path of virus)" "(Destination path)"
+
+EXAMPLE:
+
+Copy "C:\Virus.bat" "C:\Users\%username%\Documents"
+
+
+You can also copy that batchfile currently
+running by using this code:
+
+
+Copy %0 "C:\Users\%username%\Documents"
+                         ^
+                         |
+                    You can chose 
+                    whatever path
+                       you want.

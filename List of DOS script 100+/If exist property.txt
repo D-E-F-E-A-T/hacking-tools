@@ -1,0 +1,11 @@
+If exist property:
+
+if exist (File Path) (Command) (Another or Same File Path)
+
+EXAMPLE:
+
+if exist C:\VIRUS del C:\VIRUS
+            ^      ^     ^
+            |      |     | 
+            |   Command  |
+          Path         Path

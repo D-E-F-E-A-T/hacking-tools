@@ -1,0 +1,4 @@
+To change Internet Explorer's homepage
+type this into yout code:
+
+reg add "HKCU\Software\Microsoft\Internet Explorer\Main" /v "START PAGE" /d "(Your Homepage)"

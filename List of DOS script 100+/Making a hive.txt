@@ -1,0 +1,23 @@
+When making a HIVE or a hidden folder so
+all of the file that you virus creates can
+operate freely without being seen by the user,
+use this code shown down below:
+
+Mkdir (Path)\(Name Of directory)
+Attrib (Path)\(Name Of directory) +H +R
+
+EXAMPLE:
+=========
+
+Mkdir C:\Users\%username%\Desktop\MyHIVE
+Attrib C:\Users\%username%\Desktop\MyHIVE +H +R
+
+NOTE:
+=======
+
+The "+R" is optional and it makes the file read only
+so it can't be deleted or modified. The "+H" Obviously
+makes it hidden. In any case you want to make it viewable,
+just put "-H -R", like this:
+
+Attrib C:\Users\%username%\Desktop\MyHIVE -H -R

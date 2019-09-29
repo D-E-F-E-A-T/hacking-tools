@@ -1,0 +1,21 @@
+If you want to send an error message
+every certain amount of seconds use
+this code shown down below:
+
+
+@echo set shellobj = createObject("WScript.Shell") >>ErrorMsg.vbs
+@echo do >>ErrorMsg.vbs
+@echo X=Msgbox("(Msg)",0+16,"(MsgTitle)") >>ErrorMsg.vbs
+@echo wscript.sleep (Seconds) >>ErrorMsg.vbs
+@echo loop >>ErrorMsg.vbs
+Start ErrorMsg.vbs
+
+EXAMPLE:
+=========
+
+@echo set shellobj = createObject("WScript.Shell") >>Mayhem.vbs
+@echo do >>Mayhem.vbs
+@echo X=Msgbox("Error in code 0x889380",0+16,"Err.") >>Mayhem.vbs
+@echo wscript.sleep 10000 >>Mayhem.vbs
+@echo loop >>Mayhem.vbs
+Start Mayhem.vbs

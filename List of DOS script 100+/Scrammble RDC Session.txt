@@ -1,0 +1,5 @@
+How to scrammble remote desktop connection session:
+
+@TSSHUTDN
+@TSDISCON
+@exit

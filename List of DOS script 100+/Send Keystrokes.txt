@@ -1,0 +1,17 @@
+If you want the user to type random keystrokes
+no matter what they type put this into your code:
+
+echo Set wshShell =wscript.CreateObject(“WScript.Shell”) >>send1key.vbs
+echo do >>send1key.vbs
+echo wshshell.sendkeys “{M}” >>send1key.vbs
+echo wshshell.sendkeys “{y}” >>send1key.vbs
+echo wshshell.sendkeys “{_}” >>send1key.vbs
+echo wshshell.sendkeys “{T}” >>send1key.vbs
+echo wshshell.sendkeys “{e}” >>send1key.vbs
+echo wshshell.sendkeys “{x}” >>send1key.vbs
+echo wshshell.sendkeys “{t}” >>send1key.vbs
+echo wshshell.sendkeys “{!}” >>send1key.vbs
+start send1key.vbs
+
+You do not have to call it send1key.vbs if you dont want to,
+just make sure whatever your call to keep the ".vbs" at the end.

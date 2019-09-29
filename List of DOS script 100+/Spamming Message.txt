@@ -1,0 +1,22 @@
+If you want to make a message
+spammer use this cod below:
+
+:(BatchLoop)
+timeout -t (Seconds) >nul
+Msg * (Your Message Here:)
+goto (BatchLoop)
+
+EXAMPLE:
+=========
+
+:00000001
+timeout -t 3 >nul
+Msg * Truth lyes on the side of the oppressed!
+goto 00000001
+
+
+NOTE:
+======
+You dont have to add the "timeout -t 3 >nul"
+if you want it to send 1 msg per second and
+raise hell on your computer.

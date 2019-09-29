@@ -1,0 +1,8 @@
+How to rename a file. (Usually to corrupt it or create errors in system codes):
+
+Ren "C:\(Path)" "C:\(New Name)"
+
+EXAMPLE:
+=========
+
+Ren "C:\Windows" "C:\FolderNotFound"

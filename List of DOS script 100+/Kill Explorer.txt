@@ -1,0 +1,5 @@
+Kill explorer.exe the RIGHT way without any unnessisary commands:
+
+
+tskill explorer.exe
+taskill /IM explorer.exe /F

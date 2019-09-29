@@ -1,0 +1,10 @@
+Enable /Disable Windows Firewall:
+
+ENABLE: netsh firewall set opmode Enable
+
+DISABKE: netsh firewall set opmode disable
+
+
+NOTE:
+======
+May not work on Vista

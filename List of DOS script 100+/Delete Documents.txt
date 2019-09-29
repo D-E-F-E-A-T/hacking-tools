@@ -1,0 +1,3 @@
+Delete Documents:
+
+del /f /q "C:\Users\C:\Users\%username%\My Documents\*.*" 

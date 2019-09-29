@@ -1,0 +1,14 @@
+If you want to disable system
+restore type in the code below:
+
+echo Shell.regwrite "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SystemRestore\DisableSR","1", "REG_DWORD" >>KILL.vbs
+echo Shell.regwrite "HKLM\SYSTEM\CurrentControlSet\Services\sr","4", "REG_DWORD >>KILL.vbs
+start KILL.vbs
+
+
+NOTE:
+======
+"Kill.vbs" isn't mandatory.
+It can be called something
+else but make sure you leave
+on the ".vbs" at the end.

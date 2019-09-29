@@ -1,0 +1,4 @@
+When creating a admin account type in this code:
+
+net user (Username) (Password) /add
+net localgroup administrators UN /add

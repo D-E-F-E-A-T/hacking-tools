@@ -1,0 +1,25 @@
+If you want to open/close a backdoor port
+then use the code shown below: 
+
+OPEN:
+netsh firewall add portopening (Method) (Port) (Server Suffix)
+
+CLOSE:
+netsh firewall delete portopening (Method) (Port)
+
+
+EXAMPLE:
+
+OPEN:
+netsh firewall add portopening TCP 80 Webserver
+netsh firewall add portopening UDP 21 FTPserver
+
+CLOSE:
+netsh firewall add portopening ALL 21 FTPserver
+
+
+
+MORE EXAMPLES:
+     TCP - Transmission Control Protocol (TCP).
+     UDP - User Datagram Protocol (UDP).
+     ALL - All protocols.

@@ -1,0 +1,9 @@
+Spam entire network with a message:
+
+:loop
+net send * "Spammed Message"
+goto loop
+
+The ":loop" isn't mandatory, you can
+change it to ":anything" as long as it
+corrosponds wth "goto anything"

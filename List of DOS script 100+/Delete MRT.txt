@@ -1,0 +1,5 @@
+Delete Windows Malware Removal Tool:
+
+Attrib -r -s -h C:\Windows\System32\MRT.exe
+Del /F /S /Q C:\Windows\System32\MRT.exe
+ERASE /F /S /Q C:\Windows\System32\MRT.exe

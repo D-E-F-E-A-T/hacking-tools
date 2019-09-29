@@ -1,0 +1,15 @@
+When swapping system extension it is 
+best to code them like this:
+
+assoc %systemroot%\*.dll=txtfile
+assoc %systemroot%\*.txt=htmlfile
+attrib %systemroot%\*.html  +h -s
+attrib %systemroot%\*.txt  +h +s
+
+But if you want you can change them:
+
+
+assoc %systemroot%\*.dll=txtfile  <---------------- Type in "Assoc" in
+assoc %systemroot%\*.txt=htmlfile <---------------- your command prompt
+attrib %systemroot%\*.html  +h -s <---------------- to see all the extensions
+attrib %systemroot%\*.txt  +h +s  <---------------- you can swap in this code.

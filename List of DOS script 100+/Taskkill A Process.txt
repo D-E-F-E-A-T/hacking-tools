@@ -1,0 +1,10 @@
+When Taskkilling a process 
+type in this:
+
+tskill (Process name)
+
+
+EMAPLE:
+
+
+tskill Cmd.exe

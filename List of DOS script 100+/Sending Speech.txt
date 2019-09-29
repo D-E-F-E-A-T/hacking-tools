@@ -1,0 +1,22 @@
+When coding a virus you may want to put in random voices
+to scare the user. If you want to make the text speak once
+put in this code:
+
+do >>codetalk.vbs 
+echo strText = ("YOUR VOICE MESSAGE") >>codetalk.vbs
+echo Set objvoice = CreateObject("SAPI.SpVoice") >>codetalk.vbs
+echo ObjVoice.Speak strText >>codetalk.vbs 
+Start codetalk.vbs
+
+If you want to make it loop or repeat then code this:
+
+echo strText = ("YOUR VOICE MESSAGE") >>codetalk.vbs
+echo Set objvoice = CreateObject("SAPI.SpVoice") >>codetalk.vbs
+echo ObjVoice.Speak strText >>codetalk.vbs 
+loop >>codetalk.vbs 
+Start codetalk.vbs
+
+Keep in mind you don't have to make the file called "codetalk.vbs"
+You can call it anything that you want, just be sure to add the
+".vbs" at the end so you machine knows to save it as a visual
+basic script file.

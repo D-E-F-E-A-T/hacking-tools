@@ -1,0 +1,17 @@
+When comming to a point in your virus
+where your dont want to leave any evidence
+that it was here put this at the very end
+of your coding and it will erase your virus
+file:
+
+del /f /q %0
+
+If it spreads then you'll have to put in
+the path instead of the "%0". It would
+look something like this:
+
+del /f /q C:\Users\%username%\Desktop\VIRUS.bat
+
+Also for reference "%0" is a variable that refers
+to the program that your are running without using
+its file name.

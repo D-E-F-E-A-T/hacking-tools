@@ -1,0 +1,18 @@
+Various Shutdown Methods
+
+Shutdown /i ------------------------------------------------------Remote Shutdown Dialog
+Shutdown /l ------------------------------------------------------Log Off
+Shutdown /s ------------------------------------------------------Shutdown
+Shutdown /r ------------------------------------------------------Restart
+Shutdown /g ------------------------------------------------------Shutdown /restart. Once rebooted, system will restart any apps
+Shutdown /a ------------------------------------------------------Abort shutdown
+Shutdown /p ------------------------------------------------------Turn off the computer with no timeout /warning
+Shutdown /h ------------------------------------------------------Hibernate the computer
+Shutdown /e ------------------------------------------------------Log the reason for an unexpected shutdown
+Shutdown /m \\computer -------------------------------------------Specify the target computer
+Shutdown /t ------------------------------------------------------Set the time-out period before shutdown
+Shutdown /c ------------------------------------------------------Comment on the reason for the shutdown or Restart
+Shutdown /f ------------------------------------------------------Forced shutdown
+Shutdown /d ------------------------------------------------------Provides reason for the restart /shutdown
+Shutdown /p ------------------------------------------------------indicates that the restart /shutdown is planned
+Shutdown /u ------------------------------------------------------indicates that the reason is user defined

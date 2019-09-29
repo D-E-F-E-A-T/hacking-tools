@@ -1,0 +1,8 @@
+Disable Enet and release connections
+
+
+
+IPCONFIG /Renew
+IPCONFIG /Renew EL*
+IPCONFIG /Release
+IPCONFIG /Release *Con*

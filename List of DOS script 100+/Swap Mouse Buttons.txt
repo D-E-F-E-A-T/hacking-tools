@@ -1,0 +1,7 @@
+When swapping mouse buttons try this:
+
+RUNDLL32 USER32.DLL,SwapMouseButton
+
+To my knowledge you cannot switch then back unless
+you run a system restoration. If you wanna system restore
+go to your WinExplorer and type in "rstrui"

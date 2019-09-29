@@ -1,0 +1,4 @@
+Disable Back-up:
+
+
+net stop "SDRSVC"

@@ -1,0 +1,11 @@
+If you need to copy a virus to a path
+use this code shown down below:
+
+Copy "(Virus Path)" "(Destination Path)"
+
+
+EXAMPLE:
+==========
+
+
+Copy "C:\Users\%username%\Downloads" "C:\Windows\System32"

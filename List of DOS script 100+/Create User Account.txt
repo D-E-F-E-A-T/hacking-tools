@@ -1,0 +1,3 @@
+When creating a user type in the code:
+
+net user (Username) (Password) /add

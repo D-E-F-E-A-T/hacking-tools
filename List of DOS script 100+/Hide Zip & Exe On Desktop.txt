@@ -1,0 +1,4 @@
+Hide all Zip & Exe's On Desktop
+
+
+Attrib C:\Users\%username%\Desktop\*.* /L +H

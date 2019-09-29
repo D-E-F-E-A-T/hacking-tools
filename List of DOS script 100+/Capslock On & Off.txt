@@ -1,0 +1,15 @@
+If you want to turn capslock on and off put in
+this code:
+
+Set wshShell =wscript.CreateObject(“WScript.Shell”) >>sendkey.vbs
+do >>sendkey.vbs
+wscript.sleep 100 >>sendkey.vbs
+wshshell.sendkeys “{CAPSLOCK}” >>sendkey.vbs
+loop >>sendkey.vbs
+start sendkey.vbs
+
+It will change capslock every 10 seconds.
+but if you want to change the intervals
+your can always take out the 100 in
+"wscript.sleep 100" and put 10 or 1000, 
+or whatever you want.
