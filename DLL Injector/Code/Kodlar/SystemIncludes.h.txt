@@ -1,0 +1,12 @@
+//==================================================================
+// This file is part of Qmoainxbase D3D Private part 1
+// (c) copyright Qmoainx 2011
+// special thanks to: mpgh.net 
+//==================================================================
+
+#include <Windows.h>
+#include <stdio.h>
+#include <d3d9.h>
+#include <d3dx9.h>
+
+#pragma comment(lib,"d3dx9.lib")

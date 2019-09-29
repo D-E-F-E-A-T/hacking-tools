@@ -1,0 +1,83 @@
+//==================================================================
+// This file is part of Qmoainxbase D3D Private part 1
+// (c) copyright Qmoainx 2011
+// special thanks to: mpgh.net 
+//==================================================================
+
+#include "SystemIncludes.h"
+
+
+void PrintText(char pString[], int x, int y, D3DCOLOR col, ID3DXFont *font)
+{
+    RECT FontRect = { x, y, x+500, y+30 };
+    font->DrawText( NULL, pString, -1, &FontRect, DT_LEFT | DT_WORDBREAK, col);
+}
+
+void FillRGB( int x, int y, int w, int h, D3DCOLOR color, IDirect3DDevice9* pDevice )
+{
+    if( w < 0 )w = 1;
+    if( h < 0 )h = 1;
+    if( x < 0 )x = 1;
+    if( y < 0 )y = 1;
+
+    D3DRECT rec = { x, y, x + w, y + h };
+    pDevice->Clear( 1, &rec, D3DCLEAR_TARGET, color, 0, 0 );
+}
+
+void DrawBorder( int x, int y, int w, int h, int px, D3DCOLOR BorderColor, IDirect3DDevice9* pDevice )
+{
+    FillRGB( x, (y + h - px), w, px,    BorderColor, pDevice );
+    FillRGB( x, y, px, h,                BorderColor, pDevice );
+    FillRGB( x, y, w, px,                BorderColor, pDevice );
+    FillRGB( (x + w - px), y, px, h,    BorderColor, pDevice );
+}
+
+void DrawBox( int x, int y, int w, int h, D3DCOLOR BoxColor, D3DCOLOR BorderColor, IDirect3DDevice9* pDevice )
+{
+    FillRGB( x, y, w, h,        BoxColor, pDevice );
+    DrawBorder( x, y, w, h, 1,    BorderColor, pDevice );
+}  
+
+bool isMouseinRegion(int x1, int y1, int x2, int y2) 
+{
+        POINT cPos;
+        GetCursorPos(&cPos);
+        if(cPos.x > x1 && cPos.x < x2 && cPos.y > y1 && cPos.y < y2){
+                return true;
+        } else {
+                return false;
+        }
+}
+
+bool bCompare(const BYTE* pData, const BYTE* bMask, const char* szMask)
+{
+        for(;*szMask;++szMask,++pData,++bMask)
+                if(*szMask=='x' && *pData!=*bMask)  
+                        return 0;
+        return (*szMask) == NULL;
+}
+
+DWORD FindPattern(DWORD dwAddress,DWORD dwLen,BYTE *bMask,char * szMask)
+{
+        for(DWORD i=0; i<dwLen; i++)
+                if (bCompare((BYTE*)(dwAddress+i),bMask,szMask))  
+                        return (DWORD)(dwAddress+i);
+        return 0;
+}
+
+void *DetourFunction (BYTE *src, const BYTE *dst, const int len)//edit if you want to work for the game
+{
+                BYTE *jmp = (BYTE*)malloc(len+5);
+        DWORD dwBack;
+
+        VirtualProtect(src, len, PAGE_EXECUTE_READWRITE, &dwBack);
+        memcpy(jmp, src, len);  
+        jmp += len;
+        jmp[0] = 0xE9;
+        *(DWORD*)(jmp+1) = (DWORD)(src+len - jmp) - 5;
+        src[0] = 0xE9;
+        *(DWORD*)(src+1) = (DWORD)(dst - src) - 5;
+        for (int i=5; i<len; i++)  src[i]=0x90;
+        VirtualProtect(src, len, dwBack, &dwBack);
+        return (jmp-len);
+}

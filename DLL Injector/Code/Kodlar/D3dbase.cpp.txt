@@ -1,0 +1,191 @@
+//==================================================================
+// This file is part of Qmoainxbase D3D Private part 1
+// (c) copyright Qmoainx 2011
+// special thanks to: mpgh.net 
+//==================================================================
+#include "QmoMenuClass.h"
+
+oReset pReset;
+oEndScene pEndScene;
+
+QmoMenu dMenu;
+
+LPDIRECT3DDEVICE9 g_pDevice = 0;
+//Offset Adjust Font Menu Hack
+int xFontOffSet = 15;
+
+int hackopt1;
+int MenuHeight = 10;
+
+int show=1;
+
+int b = 0;
+//==================================================================
+//Menu HACK
+int hack1 = 0;
+int hack2 = 0;
+int hack3 = 0;
+int hack4 = 0;
+int hack5 = 0;
+//==================================================================
+
+void QmoMenu::CreateItem(int index, char * title, int *hack, int hackmaxval,int hacktype)
+{
+        hackcount++;
+        HACKITEM[hackcount].index = index;
+        HACKITEM[hackcount].hack = hack;
+        HACKITEM[hackcount].hackmaxval = hackmaxval;
+        HACKITEM[hackcount].hacktype = hacktype;
+        // Set the high and low Menu Hack
+        PrintText(title, xFontOffSet, index*15,HACKITEM[hackcount].HCOLOR,pFont); 
+}
+
+void QmoMenu::BuildMenu(char * menuname, int x, int y, int h, int w, DWORD TITLECOL, DWORD BACKCOLOR, DWORD BORDERCOLOR, LPDIRECT3DDEVICE9 pDevice)
+{
+        if(GetAsyncKeyState(VK_INSERT)&1)show=(!show); //Bring up the Menu HACK (INSERT)
+        if(!show) {
+                DrawBox(0,0, w, 20, BACKCOLOR, BORDERCOLOR, pDevice);
+                PrintText("Qmoainx D3D MENU", 5, 2, TITLECOL, pFont);
+                return;
+        }
+
+       // DrawBox(x,y, w, h, BACKCOLOR, BORDERCOLOR, pDevice); // Adjust the Base Menu Hack
+        PrintText(menuname, x+10, y+2, TITLECOL, pFont);
+        CreateItem(1,"Solt1", &hack1);
+        CreateItem(2,"Solt2", &hack2); 
+        CreateItem(3,"Solt3", &hack3);
+        CreateItem(4,"Wolf", &hack4);
+        CreateItem(5,"CrossHair", &hack5);
+        RenderMenu();
+}
+
+
+void QmoMenu::RenderMenu() //Hotkey menu
+{
+        if(GetAsyncKeyState(VK_DOWN)&1) 
+                        selector++;
+
+        if(GetAsyncKeyState(VK_UP)&1)
+                if(selector > 1)
+                        selector--;
+
+        if (GetAsyncKeyState(VK_RIGHT)<0){
+                for(int i=0;i < (hackcount+1);i++){
+           if(selector == HACKITEM[i].index){
+                           if(*HACKITEM[i].hack < HACKITEM[i].hackmaxval)
+                                        *HACKITEM[i].hack += 1;
+
+                                        }
+                        }
+        }
+
+        if (GetAsyncKeyState(VK_LEFT)<0){
+                for(int i=0;i < (hackcount+1);i++){
+           if(selector == HACKITEM[i].index){
+                           *HACKITEM[i].hack = 0;
+                           Sleep(200);
+                                }
+                        }
+        }
+        
+        for(int i=0;i < (hackcount+1);i++){
+                if(selector == HACKITEM[i].index)
+                        HACKITEM[i].HCOLOR = GREEN;
+                else
+                        HACKITEM[i].HCOLOR = RED;
+        }
+
+        for(int i=1; i<(hackcount+1); i++){
+                if(HACKITEM[i].hacktype == 0){
+                if(*HACKITEM[i].hack == 1) 
+
+                // Set the high and low Hotkey Menu
+                PrintText("On", xFontOffSet+100, HACKITEM[i].index*15,WHITE,pFont);
+         else 
+                PrintText("Off", xFontOffSet+100, HACKITEM[i].index*15,RED,pFont);
+        
+                }
+        }
+
+        if(selector < 1)
+                selector = 1;
+
+        if(selector > hackcount)
+                selector = 1;
+
+        hackcount = 0;
+}
+
+void TestThread() //Raising texk if ON / OFF
+{
+        if( hack1 == 1)
+                PrintText("Creat By GamBoL [EgyptTeam]", 30, 200, white, dMenu.pFont);
+        else
+                PrintText("Creat By GamBoL [EgyptTeam]", 30, 200, white, dMenu.pFont);
+} //Customize it
+
+void ReFont(LPDIRECT3DDEVICE9 pDevice) //For replacement fonts
+{
+    if (g_pDevice != pDevice)
+    {
+        g_pDevice = pDevice;
+        try
+        {
+            if (dMenu.pFont != 0)
+                dMenu.pFont->Release();
+        } catch (...) {}
+        dMenu.pFont = 0;
+        D3DXCreateFontA(pDevice, 14, 0, FW_BOLD, 0, 0, DEFAULT_CHARSET, OUT_TT_ONLY_PRECIS, PROOF_QUALITY, DEFAULT_PITCH | FF_DONTCARE, "Arial", &dMenu.pFont ); 
+    }
+}
+
+HRESULT WINAPI Reset(IDirect3DDevice9* pDevice, D3DPRESENT_PARAMETERS* pPresentationParameters )
+{
+        dMenu.pFont->OnLostDevice();
+
+        HRESULT hRet = pReset(pDevice, pPresentationParameters);
+
+        dMenu.pFont->OnResetDevice();
+
+        return hRet;
+}
+
+// Menu TITLE
+HRESULT WINAPI EndScene(LPDIRECT3DDEVICE9 pDevice)
+{
+        ReFont(pDevice);
+        dMenu.BuildMenu("mpgh.net 2011",0,0,190,200,RED,BLACK,GREEN,pDevice);
+        TestThread();
+        return pEndScene(pDevice);
+}
+
+int D3Dinit(void)//edit if you want to work for the game
+{
+        DWORD           hD3D, adr, *vtbl;
+        hD3D=0;
+        do {
+                hD3D = (DWORD)GetModuleHandle("d3d9.dll");
+                Sleep(10);
+        } while(!hD3D); 
+        adr = FindPattern(hD3D, 0x128000, (PBYTE)"\xC7\x06\x00\x00\x00\x00\x89\x86\x00\x00\x00\x00\x89\x86", "xx????xx????xx");
+        if (adr) {
+                memcpy(&vtbl,(void *)(adr+2),4);
+                pReset    = (oReset)    DetourFunction((PBYTE)vtbl[16]   , (PBYTE)Reset   ,5);
+                pEndScene = (oEndScene) DetourFunction((PBYTE)vtbl[42], (PBYTE)EndScene,5);
+        }
+        return 0;
+}
+
+BOOL WINAPI DllMain ( HMODULE hDll, DWORD dwReason, LPVOID lpReserved )//edit if you want to work for the game
+{
+        DisableThreadLibraryCalls(hDll);
+
+        if ( dwReason == DLL_PROCESS_ATTACH ) {
+
+                CreateThread(NULL, NULL, (LPTHREAD_START_ROUTINE)D3Dinit, NULL, NULL, NULL);
+        }
+        if( dwReason == DLL_PROCESS_DETACH)     {
+                dMenu.pFont->Release();
+        }
+        return TRUE;
+}
